@@ -311,20 +311,6 @@ open class TextAttributes {
     /// The underline style attribute.
     open var underlineStyle: NSUnderlineStyle {
         get {
-            if let int = dictionary[NSAttributedString.Key.underlineStyle] as? Int, let style = NSUnderlineStyle(rawValue: int) {
-                return style
-            } else {
-                return .none
-            }
-        }
-        
-        set {
-            dictionary[NSAttributedString.Key.underlineStyle] = NSNumber(value: newValue.rawValue)
-        }
-    }
-
-    open var underlineStyle: NSUnderlineStyle {
-        get {
             if let int = dictionary[NSAttributedString.Key.underlineStyle] as? Int {
                 let style = NSUnderlineStyle(rawValue: int)
                 return style
